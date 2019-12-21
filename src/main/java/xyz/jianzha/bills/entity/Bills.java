@@ -2,11 +2,15 @@ package xyz.jianzha.bills.entity;
 
 import java.util.Date;
 
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.extension.activerecord.Model;
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
+import lombok.experimental.Accessors;
+import org.springframework.format.annotation.DateTimeFormat;
 
 /**
  * (Bills)表实体类
@@ -16,6 +20,8 @@ import lombok.NoArgsConstructor;
  */
 @Data
 @NoArgsConstructor
+@Accessors(chain = true)
+@EqualsAndHashCode(callSuper = true)
 @SuppressWarnings("serial")
 public class Bills extends Model<Bills> {
     /**
@@ -32,6 +38,7 @@ public class Bills extends Model<Bills> {
     /**
      * 记账时间
      */
+    @DateTimeFormat(pattern="yyyy-MM-dd HH:mm:ss")
     private Date billtime;
 
     /**
@@ -48,4 +55,7 @@ public class Bills extends Model<Bills> {
      * 账单说明
      */
     private String remark;
+
+    @TableField(exist = false)
+    private String typeName;
 }

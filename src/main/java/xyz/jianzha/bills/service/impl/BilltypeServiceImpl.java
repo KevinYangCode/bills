@@ -6,6 +6,8 @@ import xyz.jianzha.bills.entity.Billtype;
 import xyz.jianzha.bills.service.BilltypeService;
 import org.springframework.stereotype.Service;
 
+import java.io.Serializable;
+
 /**
  * (Billtype)表服务实现类
  *
@@ -15,4 +17,8 @@ import org.springframework.stereotype.Service;
 @Service("billtypeService")
 public class BilltypeServiceImpl extends ServiceImpl<BilltypeMapper, Billtype> implements BilltypeService {
 
+    @Override
+    public Billtype getById(Serializable id) {
+        return super.getById(id);
+    }
 }

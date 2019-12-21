@@ -139,7 +139,7 @@
 		});
 		
 		//初始化查询条件的下拉列表
-		$.get("/billtype/loadAllBillType",function(objs){
+		$.get("/billType/loadAllBillType",function(objs){
 			var types=objs.data;
 			var search_typeid=$("#search_typeid");
 			$.each(types,function(index,item){
@@ -156,7 +156,7 @@
 				page:{
 					curr:1
 				}
-			})
+			});
 			return false;
 		});
 		
@@ -172,7 +172,7 @@
 					var div=$("#billTypeDiv");
 					$("#dataFrm")[0].reset();//清空表单
 					div.html("");
-					$.get("/billtype/loadAllBillType",function(objs){
+					$.get("/billType/loadAllBillType",function(objs){
 						var types=objs.data;
 						$.each(types,function(index,item){
 							if(index==0){

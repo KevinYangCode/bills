@@ -28,6 +28,7 @@ spring:
 #        enabled: true
 #        exclusions: "*.js,*.gif,*.jpg,*.png,*.css,*.ico,/druid/*"
 
+   #处理时间
   jackson:
     date-format: yyyy-MM-dd HH:mm:ss
 #配置mybatisplus
@@ -38,5 +39,6 @@ mybatis-plus:
     db-config:
       id-type: auto
     banner: true
+  # 打印sql
   configuration:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
