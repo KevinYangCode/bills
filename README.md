@@ -8,6 +8,7 @@ https://localhost:8080
 - 密码：1
 
 ## 技术
+使用了Aspect做缓存处理
 
 | 描述         | 框架                | 版本          |
 | ------------ | ------------------- | ------------- |
@@ -22,3 +23,7 @@ https://localhost:8080
 1. JDK1.8+
 2. MySQL5.X+
 3. Maven3.X+
+
+## 样图
+![样图1.png](src/main/resources/static/样图1.png)
+![样图2.png](src/main/resources/static/样图2.png)
